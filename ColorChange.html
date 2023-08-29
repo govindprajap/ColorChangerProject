@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer Switch</title>
+    <link rel="stylesheet" href="./colorChanger.css">
+    
+</head>
+<body>
+    <nav>
+        
+            <a href="/">Home</a>
+        
+            <a href="https:/www.google.com" target="_blanck">Google</a>
+        
+        
+        
+    </nav>
+    <div class="convae">
+        <h1>Color changer Switch</h1>
+        <br><br><br>
+        <span class="button" id="grey">grey</span>
+        <span class="button" id="white">white</span>
+        <span class="button" id="blue">blue</span>
+        <span class="button" id="yellow">yellow</span>
+        <br><br><br>
+       
+            <h1>Try clicking on one the color above 
+                <span>to change the background color of this page</span>
+            </h1>
+       
+        
+
+    </div>
+    
+</body>
+<script>
+    const buttons = document.querySelectorAll(".button")
+    const body = document.querySelector("body")
+    buttons.forEach(function(button){
+        console.log(button)
+        button.addEventListener("click",function(e){
+         console.log(e)
+         console.log(e.target)
+         if(e.target.id === 'grey'){
+            body.style.backgroundColor = e.target.id;
+         }
+         if(e.target.id === 'white'){
+            body.style.backgroundColor = e.target.id;
+         }
+         if(e.target.id === 'blue'){
+            body.style.backgroundColor = e.target.id;
+         }
+         if(e.target.id === 'yellow'){
+            body.style.backgroundColor = e.target.id;
+         }
+
+        })
+    })
+</script>
+</html>
